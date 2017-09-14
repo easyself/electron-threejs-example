@@ -1,3 +1,10 @@
+## install & run
+
+```
+npm install electron-prebuilt -g
+make run
+```
+
 ## Three.js for native application thanks to electron
 
 This post is a example of three.js game as native application.
