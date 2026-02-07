@@ -1,5 +1,37 @@
 {
-  "name"    : "your-app",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "name": "electron-threejs-example",
+  "version": "0.1.0",
+  "description": "Electron + Three.js example",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac --win"
+  },
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.electronthreejs",
+    "productName": "ElectronThreejsExample",
+    "files": [
+      "**/*",
+      "!node_modules/.cache/**"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  }
 }
