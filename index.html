@@ -34,9 +34,8 @@
 		<div id="container"></div>
 		<div id="info"><a href="http://threejs.org" target="_blank">three.js</a> webgl - buffergeometry - uint</div>
 
-		<script src="vendor/three.min.js"></script>
-
-		<script>
+		<script type="module">
+			import * as THREE from "./node_modules/three/build/three.module.js";
 
 			var container;
 
@@ -185,16 +184,16 @@
 
 				}
 
-				geometry.addAttribute( 'index', new THREE.BufferAttribute( indices, 1 ) );
-				geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
-				geometry.addAttribute( 'normal', new THREE.BufferAttribute( normals, 3 ) );
-				geometry.addAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
+				geometry.setIndex( new THREE.BufferAttribute( indices, 1 ) );
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'normal', new THREE.BufferAttribute( normals, 3 ) );
+				geometry.setAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
 
 				geometry.computeBoundingSphere();
 
 				var material = new THREE.MeshPhongMaterial( {
 					color: 0xaaaaaa, specular: 0xffffff, shininess: 250,
-					side: THREE.DoubleSide, vertexColors: THREE.VertexColors
+					side: THREE.DoubleSide, vertexColors: true
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );

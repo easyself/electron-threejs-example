@@ -13,16 +13,19 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-          width: 800, 
-          height: 600, 
-          frame:false, 
-          transparent: true
+    width: 800,
+    height: 600,
+    frame: false,
+    transparent: true,
+    webPreferences: {
+      contextIsolation: true
+    }
   });
 
   mainWindow.setIgnoreMouseEvents(true)
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadFile('index.html');
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
