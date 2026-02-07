@@ -5,6 +5,10 @@ npm install
 npm start
 ```
 
+## Windows build troubleshooting
+
+If `npm run dist:win` fails with `ERR_ELECTRON_BUILDER_CANNOT_EXECUTE`, the build now attempts to unblock `app-builder.exe` before running. If you still see failures, reinstall dependencies and make sure the Visual C++ runtime is available and your antivirus is not quarantining the binary.
+
 ## Three.js for native application thanks to electron
 
 This post is a example of three.js game as native application.
