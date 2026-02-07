@@ -72,3 +72,10 @@ renderer.setClearColor(0x000000, 0);
 ```
 
 Now everything is transparent and you can see the 3d floating on top :)
+
+## github action publish
+
+```
+git tag v0.*.*
+git push origin v0.*.*
+```
