@@ -1,8 +1,8 @@
 ## install & run
 
 ```
-npm install electron-prebuilt -g
-make run
+npm install
+npm start
 ```
 
 ## Three.js for native application thanks to electron
@@ -30,7 +30,7 @@ It is straightforward, just a plain npm command.
 
 
 ```
-npm install electron-prebuilt -g
+npm install
 ```
 
 
