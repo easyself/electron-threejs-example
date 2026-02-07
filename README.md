@@ -25,9 +25,8 @@ It short, it is an easy way to write desktop apps with web technology.
 Now Let's see how we can mix with three.js :)
 
 ## How To Code It
-Before having a three.js native apps, we need first to install [electron](http://electron.atom.io/), checkout the [repository README.md](https://github.com/electron/electron).
+Before having a three.js native apps, we need first to install [electron](http://electron.atom.io/), checkout the [repository README.md](https://github.com/atom/electron).
 It is straightforward, just a plain npm command.
-
 
 ```
 npm install

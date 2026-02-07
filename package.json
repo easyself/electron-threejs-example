@@ -1,14 +1,11 @@
 {
-  "name": "electron-threejs-example",
+  "name": "your-app",
   "version": "0.1.0",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "dependencies": {
-    "three": "^0.165.0"
-  },
   "devDependencies": {
-    "electron": "^30.0.0"
+    "electron": "^40.2.1"
   }
 }
