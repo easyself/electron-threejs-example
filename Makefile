@@ -1,5 +1,5 @@
 run:
-	npm start
+	npx electron .
 
 server:
 	http-server -p 8000 .
