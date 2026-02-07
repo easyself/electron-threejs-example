@@ -11,7 +11,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest]
+        include:
+          - os: macos-latest
+            dist_script: dist:mac
+          - os: windows-latest
+            dist_script: dist:win
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,7 +30,7 @@ jobs:
         run: npm install
 
       - name: Build distributables
-        run: npm run dist
+        run: npm run ${{ matrix.dist_script }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
