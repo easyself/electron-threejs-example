@@ -2,6 +2,7 @@
   "name": "electron-threejs-example",
   "version": "0.1.0",
   "description": "Electron + Three.js example",
+  "author": "Electron Threejs Example",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -37,6 +38,7 @@
     }
   },
   "dependencies": {
+    "astral-regex": "^2.0.0",
     "three": "^0.182.0"
   }
 }
